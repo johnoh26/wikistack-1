@@ -4,7 +4,7 @@ const app = express();
 const { db } = require('./models');
 const wikiRouter = require('./routes/wiki');
 // const userRouter = require('./routers/user');
-const port = 3000;
+const port = 1337;
 
 //Sequelize
 db.authenticate().
@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/wiki', wikiRouter);
 
 app.get('/', (req, res, next) => {
-    res.redirect('Wiki');
+    res.redirect('/wiki');
 });
 //ServerStart
 const init = async () => {

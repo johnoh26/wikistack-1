@@ -23,7 +23,7 @@ const Page = db.define('page', {
         allowNull: false
     },
     slug: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.STRING,
         allowNull: false
     },
     content: {
